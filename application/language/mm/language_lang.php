@@ -1,0 +1,25 @@
+<?php defined('BASEPATH') OR exit('no direct access allowed.');
+  // ------- MM
+
+  $CI =& get_instance();
+  $CI->load->helper('file');
+  /**
+    * [mm Myanmar พม่า]
+    * @return [echo] [lang('xxxx');]
+  **/
+  $lang['response'] = json_decode(read_file(BASEPATH. 'resource/locale-en.json'),TRUE);
+
+  /**
+    * [หน้า ISMS]
+    * @return [echo] [lang('xxxx');]
+  **/
+  $lang['isms_ism'] = 'System'; //ระบบ
+
+  /**
+    * [หน้า Home]
+    * @return [echo] [lang('xxxx');]
+  **/
+  $lang['home_title'] = 'အိမ်'; //หน้าแรก
+
+  // ------- MM
+?>

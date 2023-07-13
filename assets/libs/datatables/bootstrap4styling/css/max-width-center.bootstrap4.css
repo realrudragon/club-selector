@@ -1,0 +1,19 @@
+@media (max-width: 767px)
+{
+  .max-width-center {
+    text-align: center !important;
+  }
+
+  .dataTables_filter {
+    float: none !important;
+  }
+
+  .dataTables_wrapper .dataTables_paginate {
+      float: none !important;
+      text-align: center !important;
+  }
+
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+      justify-content: center !important;
+  }
+}

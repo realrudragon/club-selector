@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px !important;
+  direction: ltr;
+  cursor: pointer;
+
+}
+
+.fileinput-upload {
+    height: 52px;
+    line-height: 52px;
+    padding: 0 36px;
+    min-width: 200px;
+}
+
+
+.fileinput-upload span{
+  font-size: 16px;
+}
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
+
+
+
+.fileinput-button-2 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.fileinput-button-2 input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px !important;
+  direction: ltr;
+  cursor: pointer;
+
+}
+
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button-2 input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,116 @@
+.site-title {
+    display: block;
+    margin: 0;
+    float: left;
+    /* vertical-align: middle; */
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.site-logo img {
+    float: left;
+    height: 36px;
+    width: auto;
+    margin: 7px 15px 0 0;
+}
+
+.site-logo {
+    float: left;
+}
+
+.site-branding {
+    float: left;
+}
+
+.school-color {
+    color: #046633;
+}
+
+.newsletter {
+    padding: 50px 0;
+    background: #f0f9fd;
+    text-align: center;
+    font-size: 15px;
+}
+
+.bg-mybody {
+    background-color: #f5f2f0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    color: #37517e;
+}
+
+.section-title ::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title ::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+.bg-blue {
+    background-color: #0e294f;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 2px solid #111;
+    text-align: center;
+    padding: 8px;
+}
+
+.thead-blue-color {
+    background-color: #1f4e79;
+}
+
+/* input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.effect-2~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #3399FF;
+    transition: 0.4s;
+}
+
+.effect-2:focus~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+:focus{outline: none;} */

@@ -1,0 +1,35 @@
+.asColorPicker-trigger {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: 38px;
+  width: 37px;
+  border: 0;
+}
+.asColorPicker-wrap {
+  width: 100%;
+}
+.asColorPicker-span {
+  border-radius: 6px 6px 6px 6px;
+}
+.asColorPicker-dropdown {
+  max-width: 260px;
+}
+.asColorPicker-gradient-wheel {
+  margin-top: 4px;
+}
+.asColorPicker-gradient-preview {
+  margin-top: 4px;
+}
+.asColorPicker-gradient-control {
+  margin-top: 3px;
+}
+.asColorPicker-hex {
+  border-radius: 3px 3px 3px 3px;
+  padding: 0px 5px;
+}
+.asColorPicker-gradient-angle {
+  width: 38px;
+  border-radius: 3px 3px 3px 3px;
+  padding: 0px 5px;
+}

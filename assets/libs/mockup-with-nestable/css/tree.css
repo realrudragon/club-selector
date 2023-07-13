@@ -1,0 +1,82 @@
+.dropdown-icon {
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:2px;
+  padding-right:2px;
+}
+.tree-body {
+  padding:0px;
+  font-size:90%;
+}
+
+.tree-body .panel {
+  margin:0px;
+}
+
+.tree-body {
+  padding:0px;
+  margin:0px;
+}
+.tree-body > ul{
+    padding-left:0px;
+}
+.tree-body li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 0px 0px 5px;
+    position:relative
+}
+.tree-body li::before, .tree-body li::after {
+    content:'';
+    left:-5px;
+    position:absolute;
+    right:auto
+}
+/*tree lines*/
+.tree-body li::before { 
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree-body li::after {
+    border-top:1px solid #999;
+    height:20px;
+    top:25px;
+    width:10px
+}
+/*end tree lines*/
+.tree-body li .leaf-content {
+    display:inline-block;
+    text-decoration:none;
+    width:100%;
+}
+.tree-body li.parent-li>.leaf-content {
+    cursor:pointer
+}
+.tree-body>ul>li::before, .tree-body>ul>li::after {
+    border:0
+}
+.tree-body li:last-child::before {
+    height:25px
+}
+
+.tree-body li .panel:hover {
+    background:#eee;
+    color:#000
+}
+
+
+.tree-body li.parent-li>.leaf-content {
+    cursor:auto;
+}
+.tree-body .parent-li> span> div> div> .dropdown-icon {
+  cursor:pointer;
+}
+.tree-body .panel-body {
+  padding:5px;
+}
+.tree-body ul {
+  padding-left:20px;
+}
