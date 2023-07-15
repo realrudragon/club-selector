@@ -19,20 +19,20 @@
   $config['app_content-type_ui_main'] = 'text/html; charset=UTF-8?';
 
   /* app_layout_ui_blogs */
-  $config['app_layout_ui_blogs'] = 'layout/layout-ui-blogs/';
-  $config['app_title_ui_blogs'] = 'Terms Game. | NL';
-  $config['app_footer_ui_blogs'] = '&copy;' . date('Y') . ' Terms 1111 Game. V100 - <a href="https://worachote.com.com/"><b>Developer</b></a>';
-  $config['app_google-site-verification_ui_blogs'] = 'TmNDQRS8RZqzXcnucXlry32iwt-jjCedsd_aVkEBkY8';
-  $config['app_keywords_ui_blogs'] = 'NL, EpNets, CLOUD';
-  $config['app_description_ui_blogs'] = ' | Terms Game. | NL';
-  $config['app_robots_ui_blogs'] = 'index, follow';
-  $config['app_googlebot_ui_blogs'] = 'index, follow';
-  $config['app_author_ui_blogs'] = 'EpNets NL';
-  $config['app_revisit-after_ui_blogs'] = '1 days';
-  $config['app_revisit-after_ui_blogs'] = '1 days';
-  $config['app_content-language_ui_blogs'] = 'th';
-  $config['app_distribution_ui_blogs'] = 'Global';
-  $config['app_content-type_ui_blogs'] = 'text/html; charset=UTF-8?';
+  $config['app_layout_ui_admin'] = 'layout/layout-ui-admin/';
+  $config['app_title_ui_admin'] = 'Terms Game. | NL';
+  $config['app_footer_ui_admin'] = '&copy;' . date('Y') . ' Terms 1111 Game. V100 - <a href="https://worachote.com.com/"><b>Developer</b></a>';
+  $config['app_google-site-verification_ui_admin'] = 'TmNDQRS8RZqzXcnucXlry32iwt-jjCedsd_aVkEBkY8';
+  $config['app_keywords_ui_admin'] = 'NL, EpNets, CLOUD';
+  $config['app_description_ui_admin'] = ' | Terms Game. | NL';
+  $config['app_robots_ui_admin'] = 'index, follow';
+  $config['app_googlebot_ui_admin'] = 'index, follow';
+  $config['app_author_ui_admin'] = 'EpNets NL';
+  $config['app_revisit-after_ui_admin'] = '1 days';
+  $config['app_revisit-after_ui_admin'] = '1 days';
+  $config['app_content-language_ui_admin'] = 'th';
+  $config['app_distribution_ui_admin'] = 'Global';
+  $config['app_content-type_ui_admin'] = 'text/html; charset=UTF-8?';
 
   // base_url min load file ---------------- //
   defined('MIN_LOAD_FILE') OR define('MIN_LOAD_FILE', ((ENVIRONMENT === 'development') ? '/devcode' : '/proonline'));
