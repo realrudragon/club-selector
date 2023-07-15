@@ -6,7 +6,7 @@
             <div class="logo logo-dark">
                 <a class=".mt-2" href="index.php" style="margin-top: 10px;">
                     <img src="https://cdn.discordapp.com/attachments/877530595956244501/1127259617349619852/pp-logo_1_1.png" alt="Logo">
-                    <small class="text-dark"><strong>โรงเรียนพนัสพิทยาคาร</strong></small>
+                    <small class="text-dark"><strong>โงเรียนพนัสพิทยาคาร</strong></small>
                 </a>
             </div>
             <div class="logo logo-white">

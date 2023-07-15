@@ -19,96 +19,58 @@
                   <i class="arrow-icon"></i>
                 </span>
               </a>
+              <!-- loop club -->
+  <?php for ($i=1; $i <= 6; $i++): ?>
+    <?php 
+     $curl = curl_init();
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => BURL . 'api/meni/api/list_club?class='. $i,
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 0,
+      CURLOPT_FOLLOWLOCATION => true,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'GET',
+      CURLOPT_HTTPHEADER => array(
+        'Cookie: PreFix_LangUage_LaNg=th'
+      ),
+    ));
+    
+    $response = json_decode(curl_exec($curl), true);
+    
+    curl_close($curl);
+    ?>
               <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>ชมรม ม.1</span>
-                    <span class="arrow">
-                      <i class="arrow-icon"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="club-register.php">Namexxx</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>ชมรม ม.2</span>
-                    <span class="arrow">
-                      <i class="arrow-icon"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="app-project-list.html">Namexxx</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>ชมรม ม.3</span>
-                    <span class="arrow">
-                      <i class="arrow-icon"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="app-project-list.html">Namexxx</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>ชมรม ม.4</span>
-                    <span class="arrow">
-                      <i class="arrow-icon"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="app-project-list.html">Namexxx</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>ชมรม ม.5</span>
-                    <span class="arrow">
-                      <i class="arrow-icon"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="app-project-list.html">Namexxx</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="dropdown-menu">
-                <li class="nav-item dropdown">
-                  <a href="javascript:void(0);">
-                    <span>ชมรม ม.6</span>
-                    <span class="arrow">
-                      <i class="arrow-icon"></i>
-                    </span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="app-project-list.html">Namexxx</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <li class="nav-item dropdown">
+                <a href="javascript:void(0);">
+                  <span>ชมรม ม.<?= $i; ?></span>
+                  <span class="arrow">
+                    <i class="arrow-icon"></i>
+                  </span>
+                </a>
+                <ul class="dropdown-menu">
+                <?php 
+                if($response['status'] == 'false'){
+                  echo '';
+                }else{
+                  // print_r($response);
+                  foreach ($response['data'] as $key => $value) {
+                
+                    // $dropdown_menu = '
+                echo '<li>
+                    <a href="' . $value['clubcode'] . '">'. $value['clubname'] .'</a>
+                  </li>
+                  ';
+                    // ';
+                  }
+                
+                }
+                ?>
+                </ul>
+              </li>
+            </ul>
+            <?php endfor; ?>
               <li class="nav-item ">
               <a class="dropdown-toggle" href="<?php echo BURL . 'club/select'; ?>">
                 <span class="icon-holder">

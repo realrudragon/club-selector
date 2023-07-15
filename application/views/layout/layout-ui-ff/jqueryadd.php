@@ -10,6 +10,7 @@
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'club-selector' . '/' . 'vendors/chartjs/Chart.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'club-selector' . '/' . 'js/main.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'club-selector' . '/' . 'js/pages/dashboard-default.js');
+      echo $this->layout_ui_ff->js('ui_templates' . '/' . 'club-selector' . '/' . 'js/main.js');
     ?>
     <?php //All Add Libs
       //EX

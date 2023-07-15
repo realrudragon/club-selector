@@ -551,6 +551,47 @@
 			exit;
 		}
 		}
+
+		public function select_user_usercode() {
+			$this->header_json();
+			$requestMethod = $_SERVER["REQUEST_METHOD"];
+			if($requestMethod == 'POST'){
+
+			$usercode = isset($_POST['usercode']) ? $_POST['usercode'] : null;
+			if(empty($usercode)){
+				session_destroy();
+				header('location: ' . base_url() . 'login');
+				exit;
+			}
+			$user_data = array(
+				'user_code' => $usercode,
+			);
+			$select_user = $this->User_model->select_by_usercode($user_data);
+			if(isset($select_user) || $select_user != '' || $select_user != null){
+				$array = array(
+					'status' => 'true',
+					'code' => '200',
+					'message' => 'success',
+					'data' => $select_user
+				);
+				echo json_encode($array);
+				exit;
+			}else{
+				$array = array(
+					'status' => 'false',
+					'code' => '400',
+					'message' => 'Error',
+					'data' => null
+				);
+				echo json_encode($array);
+				exit;
+			}
+		}else{
+			session_destroy();
+			header('location: ' . base_url() . 'login');
+			exit;
+		}
+		}
 	// Controller
 	}
 ?>
