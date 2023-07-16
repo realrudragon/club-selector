@@ -58,6 +58,41 @@
 			$this->load->view($this->config->item('app_layout_ui_admin').'layout-ui-admin', $data);
 		}
 
+		public function user()
+		{
+			// echo 'Hello';
+			// exit;
+			$data = array(
+				'icon' => '',
+				'title' => 'Home',
+				'keywords' => 'Home',
+				'description' => 'Home',
+				'image' => '',
+				'control_url' => BURL . 'Home',
+				// Add URL
+				'css_url' => array(),
+				'plugins_js_url' => array(),
+				'js_url' => array(),
+				// Add info
+				'css_info' => array(),
+				'js_info' => array(),
+				'plugins_js_info' => array(),
+				// Add file
+				'css_add' => array(
+					// $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/morris.js/morris.css');
+				),
+				'js_add' => array(
+					// 'home/js/meni/meni' . MIN_LOAD_FILE . '/meni.js',
+				),
+				'plugins_js_add' => array(
+					// 'home/plugins_js/meni/meni' . MIN_LOAD_FILE . '/meni.js'
+				),
+				// View
+				'script' => "meni/script/meni_script",
+				'view' => "meni/admin_view_user",
+			);
+			$this->load->view($this->config->item('app_layout_ui_admin').'layout-ui-admin', $data);
+		}
 		
 
 	// Controller
