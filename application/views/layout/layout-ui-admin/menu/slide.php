@@ -9,7 +9,7 @@
                     <span class="hide-menu">Personal</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= BURL?>admin" aria-expanded="false">
                         <i class="mdi mdi-av-timer"></i>
                         <span class="hide-menu">Dashboard</span>
                     </a>
@@ -19,7 +19,7 @@
                     <span class="hide-menu">Users</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin/user/excel" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= BURL?>admin/user/excel" aria-expanded="false">
                         <i class="mdi mdi-file-import"></i>
                         <span class="hide-menu">import to Excel</span>
                     </a>
