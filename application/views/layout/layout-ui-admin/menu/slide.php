@@ -46,6 +46,16 @@
                         <span class="hide-menu">ชมรมทั้งหมด</span>
                     </a>
                 </li>
+                <li class="nav-small-cap">
+                    <i class="mdi mdi-dots-horizontal"></i>
+                    <span class="hide-menu">ชมรม</span>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= BURL?>admin/chekname" aria-expanded="false">
+                        <i class="mdi mdi-home"></i>
+                        <span class="hide-menu">เช็คชื่อ</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
