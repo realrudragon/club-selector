@@ -79,6 +79,7 @@
 				'plugins_js_info' => array(),
 				// Add file
 				'css_add' => array(
+					// 'libs/jsgrid/dist/jsgrid-theme.min.css',
 					// $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/morris.js/morris.css');
 				),
 				'js_add' => array(

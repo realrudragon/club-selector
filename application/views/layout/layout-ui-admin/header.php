@@ -34,7 +34,8 @@
       // echo $this->layout_ui_ff->css('ui_templates' . '/' . 'roofing_ff' . '/' . '--/--.css');
       echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/morris.js/morris.css');
       echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/chartist/dist/chartist.min.css');
-      // echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/chartist/dist/chartist.min.css');
+      echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/jsgrid/dist/jsgrid-theme.min.css');
+      echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/jsgrid/dist/jsgrid.min.css');
       echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'extra-libs/c3/c3.min.css');
       echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'dist/css/style.min.css');
       echo $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'extra-libs/jvector/jquery-jvectormap-2.0.2.css');
