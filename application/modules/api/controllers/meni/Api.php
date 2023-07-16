@@ -32,7 +32,8 @@
 			$this->header_json();
 			if($requesMethod == 'GET'){
 				$input_in = $_GET;
-				$class_input = isset($input_in['class']) ? $this->security->xss_clean($input_in['class']) : '';
+				$class_input = isset($input_in['class']) ? $input_in['class'] : '';
+				// testing()
 				if($class_input == ''){
 					$data = array(
 						'club_class' => null,

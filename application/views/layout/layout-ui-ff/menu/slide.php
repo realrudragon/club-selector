@@ -22,6 +22,7 @@
               <!-- loop club -->
   <?php for ($i=1; $i <= 6; $i++): ?>
     <?php 
+
      $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => BURL . 'api/meni/api/list_club?class='. $i,
@@ -37,8 +38,9 @@
       ),
     ));
     
-    $response = json_decode(curl_exec($curl), true);
-    
+    // $response = curl_exec($curl);
+    $response = json_decode(curl_exec($curl),true);
+    // testing($response);
     curl_close($curl);
     ?>
               <ul class="dropdown-menu">
@@ -51,17 +53,23 @@
                 </a>
                 <ul class="dropdown-menu">
                 <?php 
+                // testing($response);
                 if($response['status'] == 'false'){
                   echo '';
                 }else{
                   // print_r($response);
                   foreach ($response['data'] as $key => $value) {
+
+                    if($value['clubstatus'] == '1'){
+                      echo '<li>
+                      <a href="' . $value['clubcode'] . '">'. $value['clubname'] .'</a>
+                    </li>
+                    ';
+                    }else{
+                      echo '';
+                    }
                 
                     // $dropdown_menu = '
-                echo '<li>
-                    <a href="' . $value['clubcode'] . '">'. $value['clubname'] .'</a>
-                  </li>
-                  ';
                     // ';
                   }
                 

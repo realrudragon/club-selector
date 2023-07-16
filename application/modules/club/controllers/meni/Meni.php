@@ -57,6 +57,40 @@
 			$this->load->view($this->config->item('app_layout_ui_ff').'layout-ui-ff', $data);
 		}
 
+		public function list_club_by_class($class)
+		{
+			$data = array(
+				'icon' => '',
+				'title' => 'รายชื่อชุมนุมม.' . $class,
+				'keywords' => 'ชุมนุม ม.' . $class,
+				'description' => 'เลือกชุมนุม',
+				'image' => '',
+				'control_url' => BURL . 'club_select',
+				// Add URL
+				'css_url' => array(),
+				'plugins_js_url' => array(),
+				'js_url' => array(),
+				// Add info
+				'css_info' => array(),
+				'js_info' => array(),
+				'plugins_js_info' => array(),
+				// Add file
+				'css_add' => array(
+					// 'home/css/meni/meni' . MIN_LOAD_FILE . '/meni.css'
+				),
+				'js_add' => array(
+					// 'home/js/meni/meni' . MIN_LOAD_FILE . '/meni.js',
+				),
+				'plugins_js_add' => array(
+					// 'home/plugins_js/meni/meni' . MIN_LOAD_FILE . '/meni.js'
+				),
+				// View
+				'script' => "meni/script/meni_script",
+				'view' => "meni/meni_view",
+			);
+			$this->load->view($this->config->item('app_layout_ui_ff').'layout-ui-ff', $data);
+		}
+
 
 	// Controller
 	}

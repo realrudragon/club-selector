@@ -19,6 +19,7 @@
 			->select('
 			cb.club_code as clubcode,
 			cb.club_name as clubname,
+			cb.club_status as clubstatus,
 				')
 			->where('cb.club_class', $data['club_class']);
 		}else{
@@ -26,6 +27,7 @@
 			->select('
 			cb.club_code as clubcode,
 			cb.club_name as clubname,
+			cb.club_status as clubstatus,
 				');
 		}
         $query = $this->db->get($data_name . ' cb');
