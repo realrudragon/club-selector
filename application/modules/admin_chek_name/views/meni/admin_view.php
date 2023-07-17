@@ -113,14 +113,13 @@
                                         <td><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width:60px"></td>
                                         <td><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width:60px"></td>
                                         <td>
-                                            <div class="dropdown">
-                                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">บันทึกการส่งงาน
-                                                    <span class="caret"></span></button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">ผ่าน</a></li>
-                                                    <li><a href="#">ไม่ผ่าน</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="dl">
+                                            <select class="custom-select bg-success text-white border-0" style="width: 135px;">
+                                                <option class="border-0" value="0" selected="">บันทึกการส่งงาน </option>
+                                                <option class="" value="1">ผ่าน</option>
+                                                <option class="" value="2">ไม่ผ่าน</option>
+                                            </select>
+                                        </div>
                                         </td>
                                     </tr>
                                     <tr class="footable-odd" style="">
@@ -132,14 +131,13 @@
                                         <td><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width:60px"></td>
                                         <td><input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="width:60px"></td>
                                         <td>
-                                            <div class="dropdown">
-                                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">บันทึกการส่งงาน
-                                                    <span class="caret"></span></button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">ผ่าน</a></li>
-                                                    <li><a href="#">ไม่ผ่าน</a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="dl">
+                                            <select class="custom-select bg-success text-white border-0" style="width: 135px;">
+                                                <option value="0" selected="">บันทึกการส่งงาน </option>
+                                                <option value="1">ผ่าน</option>
+                                                <option value="2">ไม่ผ่าน</option>
+                                            </select>
+                                        </div>
                                         </td>
                                     </tr>
                                 </tbody>
