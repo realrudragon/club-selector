@@ -41,6 +41,8 @@
     // $response = curl_exec($curl);
     $response = json_decode(curl_exec($curl),true);
     // testing($response);
+    // print_r($response);
+    // exit;
     curl_close($curl);
     ?>
               <ul class="dropdown-menu">
@@ -62,7 +64,7 @@
 
                     if($value['clubstatus'] == '1'){
                       echo '<li>
-                      <a href="' . $value['clubcode'] . '">'. $value['clubname'] .'</a>
+                      <a href="'. BURL . 'club/detail/' . $value['clubcode'] . '">'. $value['clubname'] .'</a>
                     </li>
                     ';
                     }else{

@@ -5,12 +5,6 @@
 		public function __construct()
 		{
 			parent::__construct();
-			// $this->load->library('layout_ui_lino');
-			// $this->load->library('layout_ui_main');
-			// $this->load->library('layout_ui_ezon');
-			// $this->load->library('layout_ui_elec');
-			// $this->load->library('layout_ui_tech');
-			// $this->load->model('home/meni/meni_model');
 			$this->load->library('layout_ui_ff');
 			$this->load->library('home/meni/meni_library');
 			$this->load->module('home');
