@@ -41,6 +41,25 @@
     }
   }
 
+  if (!function_exists('check_backend_login'))
+  {
+    function check_backend_login()
+    {
+      if(!isset($_SESSION['usercode']))
+      {
+        session_destroy();
+        redirect(BURL . 'login');
+        exit;
+      }
+      // print_r($_SESSION['role']);
+      // exit;
+      if (!isset($_SESSION['role']) || !in_array($_SESSION['role'], ['admin', 'teacher', 'leaderteacher'])) {
+        redirect(BURL . 'home');
+        exit;
+    }
+    }
+  }
+
   // /**
   //   // Test Print_r
   //   // Print_r

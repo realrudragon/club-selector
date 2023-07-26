@@ -5,9 +5,12 @@
       // echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . '--/--.js');
       // echo $this->layout_ui_ff->plugins_js('ui_templates' . '/' . 'admin_Ui' . '/' . '--/--.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/jquery/dist/jquery.min.js');
+      echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/jquery-sparkline/jquery.sparkline.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/popper.js/dist/umd/popper.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/bootstrap/dist/js/bootstrap.min.js');
+      echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/bootstrap/dist/js/bootstrap.bundle.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'dist/js/app.min.js');
+      echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'dist/js/feather.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'dist/js/app.init.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'dist/js/app-style-switcher.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js');

@@ -1,4 +1,4 @@
-<?php // load header?>
+<?php check_backend_login();?>
 <?php $this->load->view($this->config->item ('app_layout_ui_admin') . 'header'); ?>
 
 <?php // load Menu?>

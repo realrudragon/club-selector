@@ -133,7 +133,7 @@
 				$class_room_in = isset($input_in['room']) ? trim($input_in['room']) : null;
 				$password_in = isset($input_in['password']) ? trim($input_in['password']) : null;
 				$repassword_in = isset($input_in['repassword']) ? $input_in['repassword'] : null;
-				$repassword_in = isset($input_in['repassword']) ? $input_in['repassword'] : null;
+				$status_in = isset($input_in['status']) ? $input_in['status'] : null;
 				// -- end check input
 				if(empty($username_in)){
 					echo json_encode([
@@ -176,6 +176,15 @@
 						'status' => 'false',
 						'code' => '400',
 						'message' => 'Please input Lastname',
+						'data' => null
+					]);
+					exit;
+				}
+				if(empty($status_in)){
+					echo json_encode([
+						'status' => 'false',
+						'code' => '400',
+						'message' => 'Please input status',
 						'data' => null
 					]);
 					exit;
@@ -269,7 +278,7 @@
 					'user_class_room' 	=> $class_room_in,
 					'user_password' 	=> $this->password_hash($user_password),
 					'user_status' 		=> '1',
-					'user_role_code' 		=> 'member',
+					'user_role_code' 		=> $status_in,
 					'user_create_date' 	=> date('Y-m-d H:i:s'),
 					'user_create_ip' 	=> $this->get_client_ip(),
 				);
@@ -283,7 +292,7 @@
 					'data' => array(
 						'usercode' => $select_data['usercode'],
 						'username' => $select_data['username'],
-						'studentID' => $select_data['student_ID'],
+						'studentID' => $select_data['studentID'],
 						'useremail' => $select_data['email'],
 						'firstname' => $select_data['firstname'],
 						'lastname' => $select_data['lastname'],
@@ -358,7 +367,7 @@
 							echo json_encode([
 								'status' => 'false',
 								'code' => '200',
-								'message' => 'suspended',
+								'message' => 'Inactive',
 								'data' => null
 							]);
 							exit;

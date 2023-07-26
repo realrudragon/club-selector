@@ -40,7 +40,7 @@
     
     // $response = curl_exec($curl);
     $response = json_decode(curl_exec($curl),true);
-    // testing($response);
+    //testing($response);
     // print_r($response);
     // exit;
     curl_close($curl);

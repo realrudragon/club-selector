@@ -67,22 +67,6 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item search-box">
-                            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
-                                <div class="d-flex align-items-center">
-                                    <i class="mdi mdi-magnify font-20 mr-1"></i>
-                                    <div class="ml-1 d-none d-sm-block">
-                                        <span>Search</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter">
-                                <a class="srh-btn">
-                                    <i class="ti-close"></i>
-                                </a>
-                            </form>
-                        </li>
                     </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
@@ -256,7 +240,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="<?= BURL ?>assets/layout-ui/ui_templates/admin_Ui/images/users/2.jpg" alt="user" class="rounded-circle" width="40">
-                                <span class="m-l-5 font-medium d-none d-sm-inline-block">Jonathan Doe <i class="mdi mdi-chevron-down"></i></span>
+                                <span class="m-l-5 font-medium d-none d-sm-inline-block"><?= $_SESSION['firstname'] ?> <?= $_SESSION['lastname'] ?> <i class="mdi mdi-chevron-down"></i></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                                 <span class="with-arrow">
@@ -267,27 +251,19 @@
                                         <img src="<?= BURL ?>assets/layout-ui/ui_templates/admin_Ui/images/users/2.jpg" alt="user" class="rounded-circle" width="60">
                                     </div>
                                     <div class="m-l-10">
-                                        <h4 class="m-b-0">Jonathan Doe</h4>
-                                        <p class=" m-b-0">jon@gmail.com</p>
+                                        <h4 class="m-b-0"><?= $_SESSION['firstname'] ?> <?= $_SESSION['lastname'] ?> </h4>
+                                        <p class=" m-b-0"><?= $_SESSION['useremail'] ?></p>
                                     </div>
                                 </div>
                                 <div class="profile-dis scrollable">
-                                    <a class="dropdown-item" href="javascript:void(0)">
-                                        <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                                    <a class="dropdown-item" href="javascript:void(0)">
-                                        <i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                                    <a class="dropdown-item" href="javascript:void(0)">
-                                        <i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:void(0)">
+                                    <a class="dropdown-item" href="<?= BURL ?>home">
+                                        <i class="ti-user m-r-5 m-l-5"></i> Home Page</a>
+                                    <a class="dropdown-item" href="<?= BURL ?>user">
                                         <i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:void(0)">
+                                    <a class="dropdown-item" href="<?= BURL ?>logout">
                                         <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
                                     <div class="dropdown-divider"></div>
-                                </div>
-                                <div class="p-l-30 p-10">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a>
                                 </div>
                             </div>
                         </li>

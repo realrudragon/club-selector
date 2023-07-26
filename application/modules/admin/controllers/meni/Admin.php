@@ -24,6 +24,7 @@
 
 		public function meni()
 		{
+			// testing($_SESSION);
 			// echo 'Hello';
 			// exit;
 			$data = array(

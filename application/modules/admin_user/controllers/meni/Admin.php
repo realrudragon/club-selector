@@ -5,12 +5,7 @@
 		public function __construct()
 		{
 			parent::__construct();
-			// $this->load->library('layout_ui_lino');
-			// $this->load->library('layout_ui_main');
-			// $this->load->library('layout_ui_ezon');
-			// $this->load->library('layout_ui_elec');
-			// $this->load->library('layout_ui_tech');
-			// $this->load->model('home/meni/meni_model');
+			$this->load->model('meni/Main_model');
 			$this->load->library('layout_ui_ff');
 			$this->load->library('admin/meni/meni_library');
 			$this->load->module('admin');
@@ -46,7 +41,7 @@
 					// 'home/css/meni/meni' . MIN_LOAD_FILE . '/meni.css'
 				),
 				'js_add' => array(
-					// 'home/js/meni/meni' . MIN_LOAD_FILE . '/meni.js',
+
 				),
 				'plugins_js_add' => array(
 					// 'home/plugins_js/meni/meni' . MIN_LOAD_FILE . '/meni.js'
@@ -60,6 +55,8 @@
 
 		public function user()
 		{
+			$dat = $this->Main_model->list_user();
+			// testing($dat);
 			// echo 'Hello';
 			// exit;
 			$data = array(
@@ -67,6 +64,7 @@
 				'title' => 'Home',
 				'keywords' => 'Home',
 				'description' => 'Home',
+				'response'=> $dat,
 				'image' => '',
 				'control_url' => BURL . 'Home',
 				// Add URL
@@ -83,7 +81,7 @@
 					// $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/morris.js/morris.css');
 				),
 				'js_add' => array(
-					// 'home/js/meni/meni' . MIN_LOAD_FILE . '/meni.js',
+					'admin/user/js/meni/meni' . MIN_LOAD_FILE . '/user.js',
 				),
 				'plugins_js_add' => array(
 					// 'home/plugins_js/meni/meni' . MIN_LOAD_FILE . '/meni.js'
@@ -91,6 +89,44 @@
 				// View
 				'script' => "meni/script/meni_script",
 				'view' => "meni/admin_view_user",
+			);
+			$this->load->view($this->config->item('app_layout_ui_admin').'layout-ui-admin', $data);
+		}
+
+		public function user_add()
+		{
+			// echo 'Hello';
+			// exit;
+			$data = array(
+				'icon' => '',
+				'title' => 'Home',
+				'keywords' => 'Home',
+				'description' => 'Home',
+				'image' => '',
+				'control_url' => BURL . 'Home',
+				// Add URL
+				'css_url' => array(),
+				'plugins_js_url' => array(),
+				'js_url' => array(),
+				// Add info
+				'response' => '',
+				'css_info' => array(),
+				'js_info' => array(),
+				'plugins_js_info' => array(),
+				// Add file
+				'css_add' => array(
+					// 'libs/jsgrid/dist/jsgrid-theme.min.css',
+					// $this->layout_ui_ff->css('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/morris.js/morris.css');
+				),
+				'js_add' => array(
+					'admin/user/js/meni/meni' . MIN_LOAD_FILE . '/addUser.js',
+				),
+				'plugins_js_add' => array(
+					// 'home/plugins_js/meni/meni' . MIN_LOAD_FILE . '/meni.js'
+				),
+				// View
+				'script' => "meni/script/meni_script",
+				'view' => "user_add/admin_add_user",
 			);
 			$this->load->view($this->config->item('app_layout_ui_admin').'layout-ui-admin', $data);
 		}
