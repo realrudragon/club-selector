@@ -49,6 +49,7 @@
 			// return result_array, result, row_array, row
 			return !empty($query->row_array()) ? $query->row_array() : false;
 		}
+		
 		public function detail_club_by_club_code($data = array()){
 			$data_name = 'club';
 			// // table_exists
@@ -57,6 +58,7 @@
 			}
 				$query = $this->db
 				->select('
+				cb.club_id as clubid,
 				cb.club_code as clubcode,
 				cb.club_name as clubname,
 				cb.club_amount as clubamount,
@@ -71,6 +73,7 @@
 				cb.club_resource as clubresource,
 				cb.club_plan as clubplan,
 				cb.club_assessment as clubassessment,
+				cb.create_by_usercode as createbyusercode,
 					')
 				->where('cb.club_code', $data['club_code']);
 			$query = $this->db->get($data_name . ' cb');

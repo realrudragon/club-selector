@@ -62,6 +62,20 @@
                                     <i class="anticon font-size-10"></i>
                                 </div>
                             </a>
+                            <?php $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
+                            <?php 
+              if (isset($_SESSION['role']) && in_array($_SESSION['role'], ['teacher','admin', 'leaderteacher'])):
+        ?>
+                            <a href="<?php echo BURL . 'backdoor' ?>" class="dropdown-item d-block p-h-15 p-v-10">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                    <i class="anticon opacity-04 font-size-16 anticon-project"></i>
+                                        <span class="m-l-10">ระบบหลังบ้าน</span>
+                                    </div>
+                                    <i class="anticon font-size-10"></i>
+                                </div>
+                            </a>
+                            <?php endif; ?>
                             <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>

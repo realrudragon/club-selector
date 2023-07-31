@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #111;
+  }
+  
+  .form-field {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+  }
+  
+  .form-field:focus {
+    border-color: #a5b4fc;
+    box-shadow: rgba(199, 210, 254, 0.5) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: #2563eb;
+    cursor: pointer;
+  }
+  
+  .button:focus {
+    box-shadow: rgba(59, 130, 246, 0.5) 0px 0px 0px 3px;
+    outline: none;
+  }
+  
+  .repeatable-field-demo-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  
+  .repeatable-field-demo-form h1 {
+    text-align: center;
+  }
+  
+  .repeatable-field-demo-form > * + * {
+    margin-top: 2.5rem;
+  }
+  
+  .repeatable-field {
+    padding: 0;
+    border: none;
+  }
+  
+  .repeatable-field > legend {
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    color: #111;
+  }
+  
+  .repeatable-field__rows {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .repeatable-field__rows > .repeatable-field__row + .repeatable-field__row {
+    margin-top: 0.815rem;
+  }
+  
+  .repeatable-field__row:only-child .repeatable-field__remove-button {
+    display: none;
+  }
+  
+  .repeatable-field__row-wrap {
+    display: flex;
+  }
+  
+  .repeatable-field__input {
+    flex: 1;
+  }
+  
+  .repeatable-field__remove-button {
+    margin-left: 0.5rem;
+    padding: 0.25rem;
+    color: #b91c1c;
+    background: none;
+  }
+  
+  .repeatable-field__remove-button:hover,
+  .repeatable-field__remove-button:focus {
+    text-decoration: underline;
+    box-shadow: none;
+  }
+  
+  .repeatable-field__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .repeatable-field__limit-counter {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .repeatable-field__add-button {
+    display: block;
+    font-size: 14px;
+  }

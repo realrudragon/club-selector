@@ -35,7 +35,8 @@
   $config['app_content-type_ui_admin'] = 'text/html; charset=UTF-8?';
 
   // base_url min load file ---------------- //
-  defined('MIN_LOAD_FILE') OR define('MIN_LOAD_FILE', ((ENVIRONMENT === 'development') ? '/devcode' : '/proonline'));
+  // defined('MIN_LOAD_FILE') OR define('MIN_LOAD_FILE', ((ENVIRONMENT === 'development') ? '/devcode' : '/proonline'));
+  defined('MIN_LOAD_FILE') OR define('MIN_LOAD_FILE', '/devcode');
 
   // base_url min load file ---------------- //
   defined('MIN_SESSION_GET') OR define('MIN_SESSION_GET', '_S_e_Ss_Io_N-__WeBhMvcTP');

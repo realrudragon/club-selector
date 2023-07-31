@@ -41,14 +41,30 @@
 			return !empty($query->row_array()) ? $query->row_array() : false;
 		}
 
-		public function list_user($data = array()){
+		public function list_user($data = null){
 			$data_name = 'users_user';
 			// // table_exists
 			if ($this->db->table_exists($data_name) == false) {
 				return false;
 			}
-			// $query
-			$query = $this->db
+			if(isset($data)){
+				$query = $this->db
+				->select('
+						lu.user_id as userid,
+						lu.user_code as usercode,
+						lu.user_name as username,
+						lu.student_id as studentID,
+						lu.user_email as email,
+						lu.user_firstname as firstname,
+						lu.user_lastname as lastname,
+						lu.user_class as class,
+						lu.user_class_room as room,
+						lu.user_status as status,
+						lu.user_role_code as role,
+					')
+				->LIKE('lu.student_id', $data);
+			}else{
+				$query = $this->db
 				->select('
 						lu.user_id as userid,
 						lu.user_code as usercode,
@@ -62,6 +78,7 @@
 						lu.user_status as status,
 						lu.user_role_code as role,
 					');
+			}
 			$query = $this->db->get($data_name . ' lu');
 			// return result_array, result, row_array, row
 			return !empty($query->result_array()) ? $query->result_array() : false;
@@ -92,5 +109,45 @@
 			$this->db->update($data_name, $data);
 			return $this->db->affected_rows(); 
 		}
+
+		public function update_password_user($data = array()){
+
+			$data_name = 'users_user';
+			if ($this->db->table_exists($data_name) == false) {
+				return false;
+			}
+
+			$this->db->where('user_id', $data['user_id']);
+			$this->db->update($data_name, $data);
+			return $this->db->affected_rows(); 
+		}
+
+		public function select_user_by_student_id($data){
+			$data_name = 'users_user';
+			// // table_exists
+			if ($this->db->table_exists($data_name) == false) {
+				return false;
+			}
+			// $query
+			$query = $this->db
+				->select('
+						lu.user_id as userid,
+						lu.user_code as usercode,
+						lu.user_name as username,
+						lu.student_id as studentID,
+						lu.user_email as email,
+						lu.user_firstname as firstname,
+						lu.user_lastname as lastname,
+						lu.user_class as class,
+						lu.user_class_room as room,
+						lu.user_status as status,
+						lu.user_role_code as role,
+					')
+				->where('lu.student_id', $data);
+			$query = $this->db->get($data_name . ' lu');
+			// return result_array, result, row_array, row
+			return !empty($query->result_array()) ? $query->result_array() : false;
+		}
+
 	// Model
 	}

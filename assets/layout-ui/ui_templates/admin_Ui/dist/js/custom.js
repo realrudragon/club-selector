@@ -129,3 +129,10 @@ $(function() {
         $('.show-left-part').toggleClass('ti-menu');
     });
 });
+
+function openNav() {
+    // $(".nav-toggler").on('click', function() {
+        $("#main-wrapper").toggleClass("show-sidebar");
+        $(".nav-toggler i").toggleClass("ti-menu");
+    // });
+}

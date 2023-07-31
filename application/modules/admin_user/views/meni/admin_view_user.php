@@ -20,9 +20,14 @@
                                     </div>
                                 </div>
                                 <div class="ml-auto">
-                                    <div class="form-group">
-                                        <input id="demo-input-search2" type="text" placeholder="Search" autocomplete="off">
-                                    </div>
+                                    <form method="">
+
+                                        <div class="form-group">
+                                            <input id="demo-input-search2" type="text" placeholder="Search" autocomplete="off" name="search">
+                                            <button type="submit" class="btn"> Submit </button>
+                                        </div>
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -111,6 +116,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php if ($response != null) { ?>
                                     <?php foreach ($response as $key => $value) : ?>
                                         <tr class="footable-even" style="">
                                             <td><span class="footable-toggle"></span><?= $key + 1; ?></td>
@@ -142,7 +148,7 @@
                                                 <a onclick="detailUser('<?= $value['userid'] ?>')" class="dropdown-item" data-toggle="modal" data-target="#add-contact">
                                                 <i class="mdi mdi-table-edit mr-1"></i>    
                                                 แก้ไขข้อมูล</a>
-                                                <a class="dropdown-item" href="#"><i class="mdi mdi-key-change mr-1"></i>เปลี่ยนรหัสผ่าน</a>
+                                                <a class="dropdown-item"onclick="change_pass('<?= $value['username'] ?>','<?= $value['userid'] ?>')"><i class="mdi mdi-key-change mr-1"></i>เปลี่ยนรหัสผ่าน</a>
                                                 </div>
                                             </div>
                                             </div>
@@ -150,9 +156,14 @@
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
+                                    <?php }else{?>
+                                        <tr class="footable-even" style="">
+                                            <td colspan="8" style="text-align: center;">ไม่พบข้อมูล</td>
+                                        </tr>
+                                        <?php }?>
                                 </tbody>
                                 <tfoot>
-                                    <tr>
+                                    <!-- <tr>
                                         <td colspan="2">
                                         </td>
 
@@ -179,7 +190,7 @@
                                                 </nav>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tfoot>
                             </table>
                         </div>

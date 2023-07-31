@@ -109,7 +109,7 @@
         <tbody>
         <?php foreach(json_decode($response['clubplan'] ,true) as $key_plan => $value_plan): ?>
             <tr>
-                <th scope="row"><?= $key_plan ?></th>
+                <th scope="row"><?= $key_plan+1 ?></th>
                 <td><?= $value_plan ?></td>
             </tr>
                             <?php endforeach; ?>

@@ -29,6 +29,8 @@
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/raphael/raphael.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/morris.js/morris.min.js');
       echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'dist/js/pages/dashboards/dashboard1.js');
+      echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'libs/jquery.repeater/jquery.repeater.min.js');
+      echo $this->layout_ui_ff->js('ui_templates' . '/' . 'admin_Ui' . '/' . 'js/repeater-init.js');
     ?>
     <?php //All Add Libs
       //EX

@@ -187,3 +187,78 @@ if(userNameIN == "" || emailIN == "" || statusIN == "" || studentIDIN == "" || f
   }); 
 }
 }
+
+function change_pass(name,id){
+  Swal.fire({
+    title: 'เปลี่ยนรหัสผ่าน' + name,
+    html: `<input type="password" id="NewPassWord" class="swal2-input" placeholder="รหัสผ่านใหม่">
+    <input type="password" id="repassword" class="swal2-input" placeholder="ยืนยันรหัสผ่าน">`,
+    confirmButtonText: 'ยืนยัน',
+    showCancelButton: true,
+    cancelButtonText : 'ยกเลิก',
+
+    focusConfirm: false,
+    preConfirm: () => {
+      const NewPassWord = Swal.getPopup().querySelector('#NewPassWord').value
+      const repassword = Swal.getPopup().querySelector('#repassword').value
+      if (!NewPassWord || !repassword) {
+        Swal.showValidationMessage(`กรุณากรอกข้อมูลให้ครบ`)
+      }
+      if(NewPassWord != repassword){
+        Swal.showValidationMessage(`รหัสผ่านไม่ตรงกัน`)
+      }
+      return { NewPassWord: NewPassWord, userId: id }
+    },
+  }).then((result) => {
+    if(result.dismiss === 'cancel'){
+      Swal.fire(
+        'Cancel!',
+        'คุณยกเลิกแล้ว!',
+        'error'
+      )
+    }else{
+
+      $.ajax({
+        url: burl() + 'api/backdoor/user/changePassword',
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        data: {
+          'user_id' : result.value.userId,
+          'password' : result.value.NewPassWord,
+        },
+        contentType: 'application/json',
+        success: function (res) {
+        //   console.log(res.status);
+          if (res.status === 'true') { 
+            Swal.fire({
+              title: 'Success!',
+              text: res.message,
+              icon: 'success',
+              timer: 2000,
+              timerProgressBar: true,
+            }).then((result) => {
+              window.location.href = burl() + "backdoor/user";
+            })
+              // window.location.href = "home";
+          } else {
+            if(res.code == "300"){
+              window.location.href = "login";
+            }else{
+            Swal.fire({
+              title: 'Error!',
+              text: res.message,
+              icon: 'error',
+            })
+          }
+          }
+        },
+    
+      }); 
+
+    }
+
+  })
+  
+}

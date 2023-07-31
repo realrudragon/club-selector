@@ -74,13 +74,44 @@
 					'club_code' => $data['clubcode'],
 				);
 				$select_club = $this->Main_model->detail_club_by_club_code($club_arrr);
+
+				if($select_club == null || $select_club == '' || empty($select_club)){
+					$curl = curl_init();
+
+					curl_setopt_array($curl, array(
+					CURLOPT_URL => BURL . 'api/club/cancelClub',
+					CURLOPT_RETURNTRANSFER => true,
+					CURLOPT_ENCODING => '',
+					CURLOPT_MAXREDIRS => 10,
+					CURLOPT_TIMEOUT => 0,
+					CURLOPT_FOLLOWLOCATION => true,
+					CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+					CURLOPT_CUSTOMREQUEST => 'POST',
+					CURLOPT_POSTFIELDS => 'clubCode='. $club_arrr['club_code'] .'&userCode=' . $arr_data['user_code'] ,
+					CURLOPT_HTTPHEADER => array(
+						'Content-Type: application/x-www-form-urlencoded',
+						'Cookie: PreFix_LangUage_LaNg=th; ci_session=jakmt7vhrt6g7k0ehhek5h6avi7kv87e'
+					),
+					));
+
+					$response = curl_exec($curl);
+
+					curl_close($curl);
+					// echo $response;
+					$response_arr = array(
+						'status' => false,
+						'message' => 'ไม่พบชุมนุม',
+						'data' => null,
+					);
+				}else{
 				$response_arr = array(
 					'status' => true,
 					'message' => 'เลือกชุมนุมแล้ว',
 					'data' => $select_club,
 				);
 			}
-			
+			}
+			// testing($select_club);
 			$data = array(
 				'icon' => '',
 				'title' => 'User Setting',

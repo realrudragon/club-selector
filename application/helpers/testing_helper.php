@@ -53,7 +53,7 @@
       }
       // print_r($_SESSION['role']);
       // exit;
-      if (!isset($_SESSION['role']) || !in_array($_SESSION['role'], ['admin', 'teacher', 'leaderteacher'])) {
+      if (!isset($_SESSION['role']) && !in_array($_SESSION['role'], ['admin', 'teacher', 'leaderteacher'])) {
         redirect(BURL . 'home');
         exit;
     }

@@ -49,6 +49,7 @@
 				 session_destroy();
 				  redirect(BURL . 'login');
 			   }else{
+				// testing($response);
 				// print_r($response);
 				$_SESSION['usercode'] = $response['data']['usercode'];
 				$_SESSION['username'] = $response['data']['username'];
@@ -125,7 +126,7 @@
 			$this->load->view($this->config->item('app_layout_ui_ff').'layout-ui-ff', $data);
 		}
 
-		public function list_club_by_class($class)
+		public function list_club_by_class($class = null)
 		{	
 			// testing($class);
 			if(empty($class)){
