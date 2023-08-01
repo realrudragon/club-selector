@@ -77,9 +77,9 @@
   } else {
     // print_r('production');
     defined('DB_HOSTNAME') OR define('DB_HOSTNAME', 'localhost');
-    defined('DB_USERNAME') OR define('DB_USERNAME', 'root');
-    defined('DB_PASSWORD') OR define('DB_PASSWORD', '');
-    defined('DB_DATABASE') OR define('DB_DATABASE', 'club-selector');
+    defined('DB_USERNAME') OR define('DB_USERNAME', 'worachote_club_selector');
+    defined('DB_PASSWORD') OR define('DB_PASSWORD', 'NEZ&uN53LWTTng!MRd6B3mH7cMvCo');
+    defined('DB_DATABASE') OR define('DB_DATABASE', 'worachote_club_selector');
     defined('DB_DBDRIVER') OR define('DB_DBDRIVER', 'mysqli');
   }
 ?>
