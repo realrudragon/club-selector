@@ -27,7 +27,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /* MO Somkhane */
 //$config['base_url'] = '';
 //$config['base_url']	= 'URL Web';
-$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+// $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+if ((ENVIRONMENT === 'development') || (ENVIRONMENT === '')) {
+   $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+   }else{
+     $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "https");
+   }
 $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 
@@ -450,7 +455,7 @@ $config['cookie_prefix']	= '';
 /* MO Somkhane */
 //$config['cookie_domain']	= 'ci.hmvc-baf.com';
 // $config['cookie_domain']	= '';
-$config['cookie_domain']	= (ENVIRONMENT === 'development') ? '' : 'epnets.com';
+$config['cookie_domain']	= (ENVIRONMENT === 'development') ? '' : 'club.worachote.com';
 // $config['cookie_domain']	= (ENVIRONMENT === 'development') ? '' : $config['base_url'];
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;

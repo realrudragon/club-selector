@@ -8,7 +8,7 @@
   if ((ENVIRONMENT === 'development') || (ENVIRONMENT === '')) {
     defined('SAPIURL') OR define('SAPIURL', 'http://localhost/8-xx/xx-see-v-0-0-5/');
   } else {
-    defined('SAPIURL') OR define('SAPIURL', 'https://see.xx.com');
+    defined('SAPIURL') OR define('SAPIURL', 'https://club.worachote.com');
   }
 
   defined('KEYTOKENCTC') OR define('KEYTOKENCTC', '1234567');

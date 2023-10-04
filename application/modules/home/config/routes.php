@@ -2,5 +2,6 @@
   // home
   $route['home'] = 'home/meni/meni/index';
   $route['home'] = 'home/meni/meni/meni';
+  $route['form'] = 'home/meni/meni/form';
 
 ?>

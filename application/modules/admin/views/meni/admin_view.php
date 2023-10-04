@@ -76,6 +76,7 @@
             </div>
             <!-- Column -->
             <!-- Column -->
+
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -137,6 +138,7 @@
                 </div>
             </div>
         </div>
+        <?php if($_SESSION['role'] == 'admin'){ ?>
         <center>
             <p>สถานะชุมนุม</p>
         </center>
@@ -173,8 +175,7 @@
             <div class="input-group-append">
                 <button onclick="update_status_club()" class="btn btn-outline-secondary" type="button">Button</button>
             </div>
-
+<?php } ?>
         </div>
-
     </div>
 </div>

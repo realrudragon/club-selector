@@ -62,7 +62,7 @@
 						lu.user_status as status,
 						lu.user_role_code as role,
 					')
-				->LIKE('lu.student_id', $data);
+				->LIKE('lu.student_id', $data, 'after');
 			}else{
 				$query = $this->db
 				->select('

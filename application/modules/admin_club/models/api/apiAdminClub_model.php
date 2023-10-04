@@ -196,6 +196,43 @@
 			// return result_array, result, row_array, row
 			return !empty($query->row_array()) ? $query->row_array() : false;
 		}
+
+		public function select_club_by_club_code($data = array()){
+			$data_name = 'club_log';
+
+			if ($this->db->table_exists($data_name) == false) {
+				return false;
+			}
+				$query = $this->db
+				->select('
+				cb.club_log_id as clublogid,
+				cb.club_code as clubcode,
+				cb.user_code as usercode,
+					')
+				->where('cb.club_code', $data['club_code']);
+			$query = $this->db->get($data_name . ' cb');
+			// return result_array, result, row_array, row
+			return !empty($query->result_array()) ? $query->result_array() : false;
+
+		}
+
+		public function list_club_log(){
+			$data_name = 'club_log';
+
+			if ($this->db->table_exists($data_name) == false) {
+				return false;
+			}
+				$query = $this->db
+				->select('
+				cb.club_log_id as clublogid,
+				cb.club_code as clubcode,
+				cb.user_code as usercode,
+					');
+			$query = $this->db->get($data_name . ' cb');
+			// return result_array, result, row_array, row
+			return !empty($query->result_array()) ? $query->result_array() : false;
+
+		}
 	// Model
 	}
 ?>

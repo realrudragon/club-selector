@@ -148,7 +148,7 @@
 					echo json_encode([
 						'status' => 'false',
 						'code' => '400',
-						'message' => 'Please input Username',
+						'message' => 'Please input Student ID',
 						'data' => null
 					]);
 					exit;

@@ -20,7 +20,7 @@
       <div class="title mt-5 mb-3 .section-title bg-blue p-3 text-white shadow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
         <h3 class="p-0 m-0 text-white">วัตถุประสงค์/สิ่งที่ต้องการพัฒนาให้เกิดแก่ผู้เรียน</h3>
       </div>
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
     <div class=" py-2 px-1">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 my-1">
@@ -39,7 +39,7 @@
       <div class="title mt-5 mb-3 .section-title bg-blue p-3 text-white shadow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         <h3 class="p-0 m-0 text-white">ข้อกำหนดและคุณสมบัติผู้สมัคร</h3>
       </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+    <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
     <div class=" py-2 px-1">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 my-1">
@@ -58,7 +58,7 @@
       <div class="title mt-5 mb-3 .section-title bg-blue p-3 text-white shadow" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         <h3 class="p-0 m-0 text-white">คำอธิบายกิจกรรม</h3>
       </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
     <div class=" py-2 px-1">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 my-1">
@@ -75,7 +75,7 @@
       <div class="title mt-5 mb-3 .section-title bg-blue p-3 text-white shadow" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
         <h3 class="p-0 m-0 text-white">แหล่งเรียนรู้/สื่อการเรียนรู้/วัสดุอุปกรณ์</h3>
       </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+    <div id="collapseFour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
     <div class=" py-2 px-1">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 my-1">
@@ -94,7 +94,7 @@
       <div class="title mt-5 mb-3 .section-title bg-blue p-3 text-white shadow" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
         <h3 class="p-0 m-0 text-white">แผนกำหนดการจัดกิจกรรมรายชั่วโมง</h3>
       </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+    <div id="collapseSix" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
     <div class=" py-2 px-1">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 my-1">
@@ -126,7 +126,7 @@
       <div class="title mt-5 mb-3 .section-title bg-blue p-3 text-white shadow" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
         <h3 class="p-0 m-0 text-white">การวัดผลและประเมินกิจกรรม</h3>
       </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+    <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
     <div class=" py-2 px-1">
                 <div class="row justify-content-md-center">
                     <div class="col-12 col-lg-6 my-1">

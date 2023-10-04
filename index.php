@@ -60,10 +60,10 @@ date_default_timezone_set('Asia/Bangkok');
 	// define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 	// define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
 
-	//define('ENVIRONMENT','development');
+	// define('ENVIRONMENT','production');
 	if (($_SERVER['REMOTE_ADDR'] == '127.0.0.1') || $_SERVER['REMOTE_ADDR'] == '::1' || $_SERVER['REMOTE_ADDR'] == 'home.worachote.com:888') {
 		define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-		//echo "development";
+		// echo "development";
 		// define('ENVIRONMENT','production');
 	} else {
 		// define('ENVIRONMENT','production');

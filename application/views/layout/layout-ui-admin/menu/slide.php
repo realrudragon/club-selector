@@ -136,6 +136,21 @@
             </li>
           </ul>
         </li>
+        <li class="sidebar-item ">
+          <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="mdi mdi-home"></i>
+            <span class="hide-menu">รายชื่อชุมนุม</span>
+          </a>
+          <ul aria-expanded="false" class="collapse first-level">
+            <li class="sidebar-item">
+              <a href="<?= BURL ?>backdoor/club/list/user" class="sidebar-link">
+              <i class="bi-arrow-bar-right"></i>
+                <span class="hide-menu">รายชื่อนักเรียน</span>
+              </a>
+            </li>
+            </li>
+          </ul>
+        </li>
       <?php endif; ?>
         <!-- <li class="nav-small-cap">
           <i class="mdi mdi-dots-horizontal"></i>

@@ -11,7 +11,7 @@
 <div class="container-fluid">
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <a href="https://discord.com/channels/@me/877530595956244501/1135226666927525990"><strong>คลิกที่นี่!</strong></a> เพื่อดาว์นโหลดไฟล์.
+  <a href="https://worachote.com/fl/Template-%E0%B9%83%E0%B8%AA%E0%B9%88%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5.xlsx"><strong>คลิกที่นี่!</strong></a> เพื่อดาว์นโหลดไฟล์.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>

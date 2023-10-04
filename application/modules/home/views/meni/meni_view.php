@@ -18,13 +18,13 @@
             </div>
             <div class="bg-white py-3 px-2">
               <p class="p-0 m-0 h-5">
-                <strong>1. Log In เข้าสู่ระบบ Google ด้วยอีเมลโรงเรียน (@panatp.ac.th) ของตนเอง
+                <strong>1. Log In เข้าสู่ระบบตามรหัสนักเรียน</strong>
                   <a href=""></a>หากเข้าอยู่แล้วให้ข้ามขั้นตอนนี้ได้เลย</strong>
               </p>
             </div>
             <div class="bg-white py-3 px-2 mt-1">
               <p class="p-0 m-0 h-5">
-                <strong>2. ในหัวข้อ "เลือกชุมนุม" ให้นักเรียนเลือก ระดับชั้น ของตนเอง</strong>
+                <strong>2. ในหัวข้อ "ลงทะเบียนชุมนุม" ให้นักเรียนกดและตรวจสอบข้อมูลของตัวเองหากไม่ตรงโปรดแจ้งแอดมิน</strong>
               </p>
             </div>
             <div class="bg-white py-3 px-2 mt-1">
@@ -43,7 +43,7 @@
             </div>
             <div class="bg-white py-3 px-2">
               <p class="fs-5">
-                <strong>กำหนดการฝึกซ้อม</strong>
+                <!-- <strong>กำหนดการฝึกซ้อม</strong> -->
               </p>
               <p class="p-0 m-0 h-5 px-3">
                 <strong>
@@ -51,8 +51,8 @@
                     <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
                     </path>
                   </svg>
-                  <u>ทุกระดับชั้น วันที่ 16-17 พฤษภาคม 2566</u>หากพบข้อผิดพลาด หรือพบปัญหา ให้นำส่งหลักฐานที่คุณครูอนุสรณ์ Line ID :
-                  <mark>tum_anusorn</mark>
+                  <u>ทุกระดับชั้น วันที่ xx-xx-xxxx</u>หากพบข้อผิดพลาด หรือพบปัญหา ให้นำส่งหลักฐานที่คุณครูอนุสรณ์ Line ID :
+                  <mark>xxxxx</mark>
                 </strong>
               </p>
               <div class="table-responsive mt-3">
@@ -67,18 +67,18 @@
                   <tbody>
                     <tr>
                       <td>ม.1</td>
-                      <td>18 พ.ค. 66 เวลา 16.00 น.</td>
-                      <td>18 พ.ค. 66 เวลา 16.00 น.</td>
+                      <td>xx xx xxxx เวลา xx.xx น.</td>
+                      <td>xx xx xxxx เวลา xx.xx น.</td>
                     </tr>
                     <tr>
                       <td>ม.2</td>
-                      <td>18 พ.ค. 66 เวลา 16.00 น.</td>
-                      <td>18 พ.ค. 66 เวลา 16.00 น.</td>
+                      <td>xx xx xxxx เวลา xx.xx น.</td>
+                      <td>xx xx xxxx เวลา xx.xx น.</td>
                     </tr>
                     <tr>
                       <td>ม.3</td>
-                      <td>18 พ.ค. 66 เวลา 16.00 น.</td>
-                      <td>18 พ.ค. 66 เวลา 16.00 น.</td>
+                      <td>xx xx xxxx เวลา xx.xx น.</td>
+                      <td>xx xx xxxx เวลา xx.xx น.</td>
                     </tr>
                   </tbody>
                 </table>

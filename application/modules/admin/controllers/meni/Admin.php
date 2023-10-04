@@ -32,13 +32,13 @@
 			$club_pending = $this->Meni_model->list_all_club('club_status', '2');
 			$club_cancel = $this->Meni_model->list_all_club('club_status', '3');
 			$club_setting = $this->Meni_model->status_club_setting();
-			// testing($club_setting);
+			// testing($club_pending);
 			$response_data = array(
 				'count_member' => $count_member,
 				'count_all_club' => count($list_all_club),
 				'count_club_log' => $count_club_log,
 				'count_club_appove' => count($club_appove),
-				'count_club_pending' => count($club_pending),
+				'count_club_pending' => $club_pending != null ? count($club_pending) : 0,
 				'count_club_cancel' => count($club_cancel),
 				'club_setting' => $club_setting,
 			);

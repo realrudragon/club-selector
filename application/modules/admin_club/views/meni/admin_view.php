@@ -94,7 +94,7 @@
                                         <tr class="footable-even" style="">
                                         <td><span class="footable-toggle"></span><?= $key+1 ?></td>
                                         <td>
-                                            <a href="javascript:void(0)"><?= $value['clubname'] ?></a>
+                                            <a href="<?= BURL ?>backdoor/club/user/<?= $value['clubcode'] ?>"><?= $value['clubname'] ?></a>
                                         </td>
                                         <td><?= $value['clubclass'] ?></td>
                                         <td><?= $value['clubamount'] ?></td>

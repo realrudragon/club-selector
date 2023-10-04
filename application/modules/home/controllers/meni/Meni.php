@@ -50,6 +50,11 @@
 			$this->load->view($this->config->item('app_layout_ui_ff').'layout-ui-ff', $data);
 		}
 
+		public function form()
+		{
+			header("location: https://docs.google.com/forms/d/e/1FAIpQLSfB5SUDVqO5tCtTnGo6tESv4R_KQwBO5UyesOAxndZ8W0p0gg/viewform");
+		}
+
 
 	// Controller
 	}

@@ -86,10 +86,10 @@
 			));
 	
 			$response = curl_exec($curl);
-	//testing($response);
+	// testing($response);
 			curl_close($curl);
 			$data = json_decode($response, true);
-
+// testing($data);
 			if($data['status'] == 'false'){
 				$aler_msg = $this->alert('error','error',$data['message']);
 			}else if($data['status'] == 'true'){

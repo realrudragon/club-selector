@@ -42,7 +42,11 @@
   defined('MIN_SESSION_GET') OR define('MIN_SESSION_GET', '_S_e_Ss_Io_N-__WeBhMvcTP');
 
   // base_url ---------------- //
-  $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+  if ((ENVIRONMENT === 'development') || (ENVIRONMENT === '')) {
+  $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "https");
+  }else{
+    $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "https");
+  }
   $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
   $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
   $config['bURL'] = $config['base_url'];
@@ -55,8 +59,8 @@
     defined('FURL_UPLOAD') OR define('FURL_UPLOAD', '/Applications/XAMPP/xamppfiles/htdocs/' . '8-xxxxx/xxxxx-file-xxxxx-v-0-0-5/');
   } else {
     // base_url FURL ---------------- //
-    defined('FURL') OR define('FURL', 'https://file.xxxxx.com/');
-    defined('FURL_UPLOAD') OR define('FURL_UPLOAD', '/home/xxxxx/domains/' . 'file.xxxxx.com/public_html/');
+    defined('FURL') OR define('FURL', 'https://club.worachote.com/');
+    defined('FURL_UPLOAD') OR define('FURL_UPLOAD', '/home/xxxxx/domains/' . 'club.worachote.com/public_html/');
   }
 
   // LOGO ---------------- //
@@ -77,9 +81,9 @@
   } else {
     // print_r('production');
     defined('DB_HOSTNAME') OR define('DB_HOSTNAME', 'localhost');
-    defined('DB_USERNAME') OR define('DB_USERNAME', 'worachote_club_selector');
-    defined('DB_PASSWORD') OR define('DB_PASSWORD', 'NEZ&uN53LWTTng!MRd6B3mH7cMvCo');
-    defined('DB_DATABASE') OR define('DB_DATABASE', 'worachote_club_selector');
+    defined('DB_USERNAME') OR define('DB_USERNAME', 'root');
+    defined('DB_PASSWORD') OR define('DB_PASSWORD', '');
+    defined('DB_DATABASE') OR define('DB_DATABASE', 'club-selector');
     defined('DB_DBDRIVER') OR define('DB_DBDRIVER', 'mysqli');
   }
 ?>
